@@ -42,3 +42,21 @@ elsie_gotas_de_chocolate = 10101
 print(
     f"Bernard tem pelo menos o mesmo que Elsie, mas talvez mais. Essa afirmação é {bernard_gotas_de_chocolate>=elsie_gotas_de_chocolate}."
 )
+# Atividade 4
+total_pessoas = 124
+bolacha_maizena = ("bolacha de maizena", 40)
+wafer_baunilha = ("wafer de baunilha", 64)
+oreo = ("oreo", 20)
+tortas = {
+    "chocolate e caramelo": {"borda": bolacha_maizena, "pedaços": 10},
+    "frutas vermelhas": {"borda": wafer_baunilha, "pedaços": 12},
+    "abobora": {"borda": bolacha_maizena, "pedaços": 12},
+    "maça": {"borda": wafer_baunilha, "pedaços": 10},
+    "banana": {"borda": wafer_baunilha, "pedaços": 10},
+    "manga": {"borda": bolacha_maizena, "pedaços": 12},
+    "s'mores": {"borda": oreo, "pedaços": 12},
+}
+for k, v in tortas.items():
+    print(
+        f"A torta de {k} pode ser divida igualmente entre os amantes de {v['borda'][0]}? {v['borda'][1]%v['pedaços']==0}"
+    )
