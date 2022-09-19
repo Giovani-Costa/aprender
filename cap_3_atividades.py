@@ -60,3 +60,45 @@ for k, v in tortas.items():
     print(
         f"A torta de {k} pode ser divida igualmente entre os amantes de {v['borda'][0]}? {v['borda'][1]%v['pedaços']==0}"
     )
+# Atividade 5
+ana_vestido_cor = "rosa"
+ana_sapato_cor = "branco"
+ana_tem_brincos = True
+maria_vestido_cor = "roxo"
+maria_sapato_cor = "rosa"
+maria_tem_brincos = True
+print(
+    f"Ana tem uma cor de vestido diferente de Maria? {ana_vestido_cor != maria_vestido_cor}"
+)
+print(f"As duas estão usando brincos? {maria_tem_brincos and ana_tem_brincos}")
+print(
+    f"Pelo menos alguém esta usando rosa? {ana_vestido_cor == 'rosa'or ana_sapato_cor == 'rosa'or maria_sapato_cor == 'rosa' or maria_vestido_cor == 'rosa'}"
+)
+print(
+    f"Ninguém está usando verde? {ana_vestido_cor != 'verde'and ana_sapato_cor != 'verde'and maria_sapato_cor != 'verde' and maria_vestido_cor != 'verde'}"
+)
+print(f"Ana e Maria tem a mesma cor de sapatos? {maria_sapato_cor == ana_sapato_cor}")
+# Atividade 6
+beakers = 20
+tubo_de_ensaio = 30
+luvas_de_borracha = 10
+oculos_de_protecao = 4
+# Uma pessoa precisa de um par de oculos, duas luvas de borracha, 5 beakers e 10 tubos de ensaio
+amigos = 4
+oculos_de_protecao_e_suficiente = oculos_de_protecao >= 1 * amigos
+beakers_e_suficiente = beakers >= 5 * amigos
+luvas_de_borracha_e_suficiente = luvas_de_borracha >= 2 * amigos
+tubo_de_ensaio_e_suficiente = tubo_de_ensaio >= 10 * amigos
+relatorio_final = f"""
+Relatório final: 
+
+Cada amigo têm óculos de proteção o suficiente: {oculos_de_protecao_e_suficiente}
+Cada amigo têm luvas de borrachas o suficiente: {luvas_de_borracha_e_suficiente}
+Cada amigo têm tubos de ensaio o suficiente: {tubo_de_ensaio_e_suficiente}
+Cada amigo têm beakers o suficiente: {beakers_e_suficiente}
+
+Cada amigo têm luvas de borracha e óculos de proteção o suficiente: {luvas_de_borracha_e_suficiente and oculos_de_protecao_e_suficiente}
+Cada amigo têm tubo de ensaio ou beakers o suficiente: {tubo_de_ensaio_e_suficiente or beakers_e_suficiente}
+Cada amigo têm óculos de proteção e beakers ou tubos de ensaio e beakers o suficiente: {beakers_e_suficiente and (tubo_de_ensaio_e_suficiente or oculos_de_protecao_e_suficiente)}
+Cada amigo têm todos o suficiente: {oculos_de_protecao_e_suficiente and tubo_de_ensaio_e_suficiente and beakers_e_suficiente and luvas_de_borracha_e_suficiente}"""
+print(relatorio_final)
