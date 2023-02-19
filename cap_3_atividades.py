@@ -102,3 +102,68 @@ Cada amigo têm tubo de ensaio ou beakers o suficiente: {tubo_de_ensaio_e_sufici
 Cada amigo têm óculos de proteção e beakers ou tubos de ensaio e beakers o suficiente: {beakers_e_suficiente and (tubo_de_ensaio_e_suficiente or oculos_de_protecao_e_suficiente)}
 Cada amigo têm todos o suficiente: {oculos_de_protecao_e_suficiente and tubo_de_ensaio_e_suficiente and beakers_e_suficiente and luvas_de_borracha_e_suficiente}"""
 print(relatorio_final)
+
+# Atividade 7
+print(12345 % 88)
+
+# Atividade 8
+planetas = 8
+numero_magico_pentatopia = 5
+print(f"A galáxia Pentatopia tem {planetas **numero_magico_pentatopia} planetas")
+numero_magico_tripolia = 3
+print(f"A galáxia de Tripoloia tem {planetas **numero_magico_tripolia} planetas")
+numero_magico_deka = 10
+print(f"A galáxia de Deka tem {planetas**numero_magico_deka} planetas")
+numero_magico_heptaton = 7
+print(f"A galáxia de Heptaton tem {planetas**numero_magico_heptaton} planetas")
+numero_magico_oktopia = 8
+print(f"A galáxia de Oktopia tem {planetas**numero_magico_oktopia} planetas")
+
+# Desafio 1
+nome = input("nome: ")
+entrada = input("entrada: ")
+prato_um = input("prato um: ")
+prato_dois = input("prato dois: ")
+sobremesa_um = input("sobremesa um: ")
+sobremesa_dois = input("sobremesa dois: ")
+sobremesa_tres = input("sobremesa três: ")
+print(f"-- Oi, meu nome é {nome}")
+print("-- Oi, eu sou o Robson, o que você gostaria?")
+print(f"-- Eu quero {entrada} como entrada!")
+entradas = ("arroz", "abóbora", "feijão")
+if entrada in entradas:
+    print(f"-- OK! Saindo um(a) {entrada}! Mais alguma coisa?")
+else:
+    print(f"-- Desculpa, não temos {entrada}, mais alguma coisa?")
+print(f"-- Junto com isso que quero {prato_um} e {prato_dois}.")
+pratos = ("bife", "macarrão", "frango", "coco")
+if prato_um in pratos and prato_dois in pratos:
+    print(f"-- OK! Saindo um(a) {prato_um} e {prato_dois}! Alguma sobremesa?")
+else:
+    if prato_um not in pratos:
+        print(f"-- Desculpa, não temos {prato_um}, alguma sobremesa?")
+    if prato_dois not in pratos:
+        print(f"-- Desculpa, não temos {prato_dois}, alguma sobremesa?")
+print(
+    f"-- E a melhor parte, eu quero {sobremesa_um}, {sobremesa_dois}, e {sobremesa_tres} como sobremesa!"
+)
+sobremesas = (
+    "bolo de chocolate",
+    "bolo de cenoura",
+    "sorvete de morango",
+    "sorvete de ninho trufado",
+    "sorvete de baunilha",
+)
+if (
+    sobremesa_um in sobremesas
+    and sobremesa_dois in sobremesas
+    and sobremesa_tres in sobremesas
+):
+    print(f"-- OK! Saindo um(a) {sobremesa_um}, {sobremesa_dois} e {sobremesa_tres}!")
+else:
+    if sobremesa_um not in sobremesas:
+        print(f"-- Desculpa, não temos {sobremesa_um}!")
+    if sobremesa_dois not in sobremesas:
+        print(f"-- Desculpa, não temos {sobremesa_dois}!")
+    if sobremesa_tres not in sobremesas:
+        print(f"-- Desculpa, não temos {sobremesa_tres}!")
