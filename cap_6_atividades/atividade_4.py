@@ -1,0 +1,16 @@
+import turtle
+
+circulo = turtle.Turtle()
+circulo.fillcolor("purple")
+circulo.begin_fill()
+circulo.circle(100)
+circulo.end_fill()
+circulo.fillcolor("blue")
+circulo.begin_fill()
+circulo.circle(75)
+circulo.end_fill()
+circulo.fillcolor("red")
+circulo.begin_fill()
+circulo.circle(50)
+circulo.end_fill()
+input()

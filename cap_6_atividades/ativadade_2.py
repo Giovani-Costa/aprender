@@ -1,0 +1,27 @@
+# Ativadade 2
+import turtle
+import random
+
+seta = turtle.Turtle()
+seta.turtlesize(3, 3, 2)
+caneta = turtle.Turtle()
+angulo_seta = random.randint(1, 360)
+caneta.penup()
+caneta.goto(200, 0)
+caneta.pendown()
+caneta.write("Sim", font=("Open Sans", 30))
+caneta.penup()
+caneta.goto(-400, 0)
+caneta.pendown()
+caneta.write("Não", font=("Open Sans", 30))
+caneta.penup()
+caneta.goto(-100, 300)
+caneta.pendown()
+caneta.write("Talvez", font=("Open Sans", 30))
+caneta.penup()
+caneta.goto(-200, -200)
+caneta.pendown()
+caneta.write("Sim, mas não agora", font=("Open Sans", 30))
+caneta.ht()
+seta.left(angulo_seta)
+input()
