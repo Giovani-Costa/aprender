@@ -1,0 +1,5 @@
+print("Hello World")
+# print("Olá Mundo")
+# print("Hola Mundo")
+# print("Kon'nichiwa sekai")
+# print("Sziasztok Világ")
